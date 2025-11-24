@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kameleo Extractor</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(0,0,0,0.6);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00ff88, #00ffcc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tagline { font-size: 14px; opacity: 0.8; margin-bottom: 30px; }
+        input {
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+        }
+        input::placeholder { color: #aaa; }
+        button {
+            width: 100%;
+            padding: 16px;
+            margin-top: 10px;
+            background: linear-gradient(90deg, #00ff88, #00ffcc);
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { transform: scale(1.05); }
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+        .success {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        iframe { border-radius: 15px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Kameleo Extractor</h1>
+    <p class="tagline">Premium Private Tool Access</p>
+
+    <input type="text" id="user" placeholder="Enter Username" autocomplete="off">
+    <input type="email" id="gmail" placeholder="Enter Gmail" autocomplete="off">
+
+    <button onclick="login()">ACCESS NOW</button>
+
+    <div class="footer">kameleo By F1</div>
+</div>
+
+<div class="success" id="success">
+    <h2>✅ Access Granted!</h2>
+    <p>এখানে তোর মূল কন্টেন্ট দেখাবে</p>
+    <!-- এখানে তোর ভিডিও/লিঙ্ক/ফাইল দিবি -->
