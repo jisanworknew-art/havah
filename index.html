@@ -26,6 +26,7 @@
             max-width: 400px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
         }
         h1 {
             font-size: 32px;
@@ -57,20 +58,31 @@
             border: none;
             border-radius: 12px;
             cursor: pointer;
-            transition: 0.3s;
         }
         button:hover { transform: scale(1.05); }
-        .footer {
-            margin-top: 40px;
-            font-size: 13px;
-            opacity: 0.7;
-        }
-        .success {
-            display: none;
+        .footer { margin-top: 40px; font-size: 13px; opacity: 0.7; }
+        .success { display: none; text-align: center; width: 100%; max-width: 400px; }
+        .success h2 { font-size: 28px; margin: 40px 0; color: #00ff88; }
+        .download-btn {
+            display: block;
+            width: 90%;
+            max-width: 380px;
+            padding: 22px;
+            margin: 25px auto;
+            background: linear-gradient(90deg, #ff0055, #ffaa00);
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
             text-align: center;
-            margin-top: 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 0 12px 35px rgba(255,0,85,0.5);
+            transition: all 0.3s;
         }
-        iframe { border-radius: 15px; margin-top: 20px; }
+        .download-btn:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(255,0,85,0.7);
+        }
     </style>
 </head>
 <body>
@@ -78,16 +90,49 @@
 <div class="container">
     <h1>Kameleo Extractor</h1>
     <p class="tagline">Premium Private Tool Access</p>
-
-    <input type="text" id="user" placeholder="Enter Username" autocomplete="off">
-    <input type="email" id="gmail" placeholder="Enter Gmail" autocomplete="off">
-
+    <input type="text" id="user" placeholder="Enter Username">
+    <input type="email" id="gmail" placeholder="Enter Gmail">
     <button onclick="login()">ACCESS NOW</button>
-
     <div class="footer">kameleo By F1</div>
 </div>
 
 <div class="success" id="success">
-    <h2>✅ Access Granted!</h2>
-    <p>Kameleo Pro download Land</p>
-    <!-- https://gofile.io/d/4oPhmb -->
+    <h2>Access Granted!</h2>
+    
+    <a href="https://gofile.io/d/4oPhmb" class="download-btn" target="_blank">
+        DOWNLOAD ZIP
+    </a>
+
+    <p style="margin-top: 50px; opacity: 0.6;">Powered by F1</p>
+</div>
+
+<script>
+const users = {
+  "joychowdhury1": "joychowdhuryy969@gmail.com",
+  "toukiruddin003": "sababsafwan213@gmail.com",
+  "ashikis004": "ashikulislamyasin@gmail.com",
+  "Nadia3c1": "oishorjorahman55@gmail.com",
+  "rony6c1": "mdronysardar160@gmail.com",
+  "sourav8c3": "souravchandroray@gmail.com",
+  "keya0c3": "keyas01913@gmail.com",
+  "rupakmn1003": "rupakmondal137@gmail.com",
+  "aminfreepp1": "amin438@gmail.com",
+  "solve44": "host.cam@gmail.com",
+  "solve46": "host.cam@gmail.com",
+  "solve76": "host.cam@gmail.com"
+};
+
+function login() {
+    const u = document.getElementById("user").value.trim();
+    const g = document.getElementById("gmail").value.trim();
+    if (users[u] && users[u] === g) {
+        document.querySelector(".container").style.display = "none";
+        document.getElementById("success").style.display = "block";
+    } else {
+        alert("Incorrect username or Gmail");
+    }
+}
+</script>
+
+</body>
+</html>
